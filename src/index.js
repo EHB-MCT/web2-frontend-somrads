@@ -23,6 +23,16 @@ window.onload = () => {
       peopleEl.innerHTML = innerHtml;
       peopleContainer.appendChild(peopleEl)
     })
+
+    document.querySelector('.btn').forEach(item =>{
+      item.addEventListener('click', event =>{
+        //get id 
+        let id = event.target.id;
+        //search in array
+        let p = people.find(el => el.id == id);
+        console.log(p);
+      })
+    })
   }
 }
 
