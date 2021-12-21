@@ -1,27 +1,44 @@
-window.onload = function () {
+let list = [];
+let people= [];
+
+window.onload = () => {
+  console.log("page loaded");
   getData();
+  setTimeout(buildList, 1000);
+
+  function buildList(){
+    people.forEach(data => {
+      const peopleContainer = document.getElementById("list-data");
+
+      const peopleEl = document.createElement('div');
+
+      peopleEl.classList.add('people');
+      const innerHtml = `
+      
+      <h2>${data.name}</h2>
+      <h2>${data.height}</h2>
+      `;
+
+      peopleEl.innerHTML = innerHtml;
+      peopleContainer.appendChild(peopleEl)
+    })
+  }
 }
 
- async function getData(){
-  await fetch(`https://swapi.dev/api/people`)
+async function getData() {
+  await fetch('https://swapi.dev/api/people/')
   .then(resp => resp.json())
-  .then(data => {
-  console.log(data.results);
-  showData(data)
-  })
-}
-
-function showData(data){
-  data.results.forEach(data => {
-    let htmlString = `
-  <h1>Title: ${data.name}</h1>
-  <h2>Episode ${data.height}</h2>
-  `
-  document.getElementById('people').innerHTML= htmlString;
-  });
+  .then (data => {
+      list = data.results;
+      // LOOP 
+      list.forEach(starWars =>{
+          fetch(starWars.url)
+          .then (resp => resp.json())
+          .then(dataObj => {
+              people.push(dataObj);
   
-}
-
-
-
-
+          });
+      });
+  
+  });
+  }
