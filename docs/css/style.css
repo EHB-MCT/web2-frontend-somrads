@@ -4,7 +4,6 @@
   color: white;
 }
 
-
 nav{
   align-items: center;
   justify-content: center;
@@ -28,9 +27,6 @@ nav{
   list-style: none;
   text-decoration: none; 
 }
-
-
-
 
 .star-wars{
   font-weight: 600;
