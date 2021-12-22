@@ -8,23 +8,6 @@ window.onload = () => {
   setTimeout(buildList, 1000);
 
   function buildList(){
-    // people.forEach(data => {
-    //   const peopleContainer = document.getElementById("list-data");
-
-    //   const peopleEl = document.createElement('div');
-
-    //   peopleEl.classList.add('people');
-    //   const innerHtml = `
-    //   <div class="swPerson">
-    //   <h2>${data.name}</h2>
-    //   <button id="add-button">Add</button>
-    //   </div>
-    //   `;
-
-    //   peopleEl.innerHTML = innerHtml;
-    //   peopleContainer.appendChild(peopleEl)
-    // })
-
     // document.querySelector('.btn').forEach(item =>{
     //   item.addEventListener('click', event =>{
     //     //get id 
@@ -41,6 +24,15 @@ window.onload = () => {
     people.sort(function(a,b){
       return a.id - b.id
     })
+
+    for (let p of people) {
+      html += 
+     ` <div class="swPerson">
+        <h2>${p.name}</h2>
+         <button id="add-button">Add</button>
+         </div>`
+    }
+    document.getElementById('list-data').innerHTML = html;
   }
 }
 
