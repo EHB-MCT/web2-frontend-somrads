@@ -75,6 +75,7 @@ favPeople.forEach(element => {
       gender: element.gender
     })
   })
+ 
 
   .then(resp => {
     return resp.json();
