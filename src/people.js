@@ -38,8 +38,10 @@ window.onload = () => {
       const innerHtml = `
       <div class="swPerson">
       <img src="/docs/images/${data.name}.jpeg" alt="${data.name}">
+      <div class="card">
       <h2>${data.name}</h2>
       <a href="#" id="${data.url}" class="btn btn-primary ">Add to list</a>
+      </div>
       </div>
       `;
       
@@ -70,10 +72,10 @@ favPeople.forEach(element => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name: element.name,
       birthyear: element.birthyear,
+      gender: element.gender,
+      name: element.name,
       species: element.species,
-      gender: element.gender
     })
   })
  

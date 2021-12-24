@@ -17,12 +17,15 @@ window.onload = () => {
     const allObjectsEl = document.createElement('div');
     allObjectsEl.classList.add('my-list');
      allObjectsInnerHtml = `
-    <h3 class="name">${element.name}</h3>
-   
+    <h2 class="name">${element.name}</h2>
+
 
     `;  
     allObjectsEl.innerHTML = allObjectsInnerHtml;
     allObjects.appendChild(allObjectsEl);
     });
   }
+
+  
 };
+

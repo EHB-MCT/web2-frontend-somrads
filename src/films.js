@@ -38,8 +38,10 @@ window.onload = () => {
       const innerHtml = `
       <div class="swFilm">
       <img src="/docs/images/${data.title}.jpeg" alt="${data.title}">
+      <div class="card">
       <h2>${data.title}</h2>
       <a href="#" id="${data.url}" class="btn btn-primary ">Add to list</a>
+      </div>
       </div>
       `;
       
