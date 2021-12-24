@@ -20,7 +20,7 @@ async function getData() {
   
   });
 }
-
+console.log(people);
 
 window.onload = () => {
   console.log("page loaded");
@@ -37,6 +37,7 @@ window.onload = () => {
       peopleEl.classList.add('people');
       const innerHtml = `
       <div class="swPerson">
+      <img src="">
       <h2>${data.name}</h2>
       <a href="#" id="${data.url}" class="btn btn-primary ">Add to list</a>
       </div>
