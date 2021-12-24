@@ -37,7 +37,7 @@ window.onload = () => {
       filmsEl.classList.add('films');
       const innerHtml = `
       <div class="swFilm">
-      <img src="/docs/images/${data.name}.jpeg" alt="${data.name}">
+      <img src="/docs/images/${data.title}.jpeg" alt="${data.title}">
       <h2>${data.title}</h2>
       <a href="#" id="${data.url}" class="btn btn-primary ">Add to list</a>
       </div>
