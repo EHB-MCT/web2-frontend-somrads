@@ -25,3 +25,5 @@ https://xd.adobe.com/view/44ed0951-a617-49b8-bf8a-1f980db85b0b-11be/
 
 URL basic design
 https://xd.adobe.com/view/6132fa19-8c5e-40b0-9d64-c7346fc79378-3461/
+
+Geen enkel van de routes is gelinkt aan de front end, alleen GET via fetch is gelukt. Post werkt maar wilt de gewilde body niet meegeven aan mongo.
