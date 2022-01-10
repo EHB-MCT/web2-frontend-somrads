@@ -65,25 +65,25 @@ window.onload = () => {
 function postData(favPeople){
   const url = "https://web2-starwars-api.herokuapp.com/people"
  //post data
-favPeople.forEach(element => {
-  fetch(url, {
+favPeople.forEach(async element => {
+  console.log("clicked value", element);
+  await fetch(url, {
     method: "POST",
     header: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      birthyear: element.birthyear,
-      gender: element.gender,
+    body: JSON.stringify({ 
       name: element.name,
+      birthyear: element.birthyear,
       species: element.species,
+      gender: element.gender,
     })
+    
   })
- 
-
   .then(resp => {
     return resp.json();
   })
-  .then(async data => {
+  .then(data => {
     console.log('succes', data);
   })
   

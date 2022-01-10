@@ -1,10 +1,16 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    films: './src/films.js',
+    myList: './src/myList.js',
+    people: './src/people.js',
+    planets: './src/planets.js'
+  },
+
   output: {
     path: path.resolve(__dirname, 'docs'),
-    filename: 'main.js',
+    filename: '[name].js',
   },
   mode: 'production'
 };
